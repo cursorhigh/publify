@@ -33,7 +33,7 @@ This creates:
 
 ### 🎯 **Goal**
 
-To build a system that can **capture a single spoken announcement**, convert it to **multiple languages**, and broadcast it instantly as **audio + text**, across **multiple platforms**, ensuring:
+To build a system that can **capture a single spoken announcement**, convert it to **multiple languages**, and broadcast it instantly as **audio + text + video**, across **multiple platforms**, ensuring:
 
 * Safety
 * Accessibility
