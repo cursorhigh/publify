@@ -93,7 +93,7 @@ Leverages Agora’s proven infrastructure to handle **thousands** of listeners.
 
 Built with:
 
-* **FastAPI** (backend)
+* **Django/FastAPI** (backend)
 * **React** (frontend)
 * **AI/ML pipeline** for STT → NMT → TTS
 
@@ -104,7 +104,7 @@ Built with:
 | Layer                  | Tech                                                    |
 | ---------------------- | ------------------------------------------------------- |
 | **Core Communication** | Agora APIs (RTC, Audio SDK, Channel Management)         |
-| **Backend**            | FastAPI                                                 |
+| **Backend**            | Django / FastAPI                                        |
 | **Frontend**           | React                                                   |
 | **AI/ML**              | STT, NLP, Neural MT, TTS                                |
 | **Database**           | To be finalized (Preferences, Histories, User Profiles) |
