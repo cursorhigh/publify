@@ -1,12 +1,32 @@
+import re
 import time
 import torch
+
+
+def clean_output(text: str) -> str:
+    text = text.replace("▁", " ")
+
+    text = re.sub(r"[ ]{2,}", " ", text)
+
+    text = text.replace(" :", ":")
+    text = text.replace(" ;", ";")
+
+    
+    text = text.replace(" ।", "।")  
+    text = text.replace("।", "। ") 
+
+    text = re.sub(r"(\S)\s{5,}(\S)", r"\1 \2", text)
+
+    text = " ".join(text.split())
+
+    return text.strip()
 
 def translate_text(text, tgt_lang, model, tokenizer, device):
     start = time.time()
 
     tokenizer.src_lang = "eng_Latn"
 
-    encoded = tokenizer(text, return_tensors="pt").to(device)
+    encoded = tokenizer(text, return_tensors="pt", truncation=True).to(device)
 
     bos_token_id = tokenizer.convert_tokens_to_ids(tgt_lang)
 
@@ -22,8 +42,9 @@ def translate_text(text, tgt_lang, model, tokenizer, device):
         )
 
     decoded = tokenizer.decode(out[0], skip_special_tokens=True)
-    decoded = decoded.replace("▁", " ")
-    decoded = " ".join(decoded.split())
+
+    final_output = clean_output(decoded)
 
     print(f"Translated in {time.time() - start:.2f}s")
-    return decoded
+
+    return final_output

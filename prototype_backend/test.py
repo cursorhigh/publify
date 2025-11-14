@@ -1,8 +1,8 @@
 import requests
 
 payload = {
-    "text": "Evacuation orders have been issued for the coastal areas due to the approaching cyclone.",
-    "region": "delhi"
+    "text": "Flood in delhi region please help immediately my name is idk",
+    "region": "gujarat"
 }
 
 res = requests.post("http://127.0.0.1:8000/translate", json=payload)
