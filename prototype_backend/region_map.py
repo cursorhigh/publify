@@ -14,5 +14,12 @@ REGION_TO_LANG = {
     "andhra": "tel_Telu",
     "karnataka": "kan_Knda",
     "kerala": "mal_Mlym",
-    "odisha": "ory_Orya"
+    "odisha": "ory_Orya",
+    "telangana": "tel_Telu",
+    "assam": "asm_Beng",
+    "assamese": "asm_Beng",
+
+    "kashmir": "urd_Arab",
+    "urdu": "urd_Arab",
+    "jammu": "urd_Arab"
 }
